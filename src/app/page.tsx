@@ -12,7 +12,7 @@ function Navigation() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <span className="font-medium text-zinc-900 tracking-tight">
-              ccscoach.com
+              CCS Coach
             </span>
           </div>
 
@@ -1122,7 +1122,7 @@ function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center">
             <span className="text-sm font-medium text-zinc-900">
-              ccscoach.com
+              CCS Coach
             </span>
           </div>
 

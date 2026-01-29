@@ -12,7 +12,7 @@ function Navigation() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <span className="font-medium text-zinc-900 tracking-tight">
-              CCS Coach
+              StudyCCS
             </span>
           </div>
 
@@ -182,7 +182,7 @@ function Hero() {
               </div>
               <div className="flex-1 flex justify-center">
                 <div className="px-4 py-1 bg-white rounded-md border border-zinc-200 text-xs text-zinc-400">
-                  app.ccscoach.com
+                  app.studyccs.com
                 </div>
               </div>
               <div className="w-16" />
@@ -196,7 +196,7 @@ function Hero() {
                   <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-teal-400 to-emerald-500 flex items-center justify-center">
                     <span className="text-white font-bold text-sm">C</span>
                   </div>
-                  <span className="font-medium text-white text-sm">CCS Coach</span>
+                  <span className="font-medium text-white text-sm">StudyCCS</span>
                 </div>
                 
                 <div className="space-y-1">
@@ -1122,7 +1122,7 @@ function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center">
             <span className="text-sm font-medium text-zinc-900">
-              CCS Coach
+              StudyCCS
             </span>
           </div>
 
@@ -1138,7 +1138,7 @@ function Footer() {
             </a>
           </div>
 
-          <p className="text-sm text-zinc-400">© 2026 CCS Coach</p>
+          <p className="text-sm text-zinc-400">© 2026 StudyCCS</p>
         </div>
       </div>
     </footer>

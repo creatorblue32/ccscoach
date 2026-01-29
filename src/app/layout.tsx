@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "CCS Coach | Master Step 3 CCS Cases",
+  title: "StudyCCS | Master Step 3 CCS Cases",
   description:
     "Stop grinding through endless cases. Learn exactly what to order and think at every step—maximize your score even on cases you've never seen before.",
   keywords: [

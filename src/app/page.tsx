@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 // Navigation Component
 function Navigation() {
@@ -11,9 +12,9 @@ function Navigation() {
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <span className="font-medium text-zinc-900 tracking-tight">
+            <Link href="/" className="font-medium text-zinc-900 tracking-tight">
               StudyCCS
-            </span>
+            </Link>
           </div>
 
           {/* Desktop Nav */}
@@ -39,12 +40,12 @@ function Navigation() {
           </div>
 
           <div className="hidden md:flex items-center gap-6">
-            <button className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors">
+            <Link href="/login" className="text-sm text-zinc-600 hover:text-zinc-900 transition-colors">
               Log In
-            </button>
-            <button className="text-sm px-5 py-2 bg-gradient-to-r from-teal-600 to-emerald-600 text-white rounded-md hover:from-teal-700 hover:to-emerald-700 transition-all shadow-sm shadow-teal-500/20">
+            </Link>
+            <Link href="/signup" className="text-sm px-5 py-2 bg-gradient-to-r from-teal-600 to-emerald-600 text-white rounded-md hover:from-teal-700 hover:to-emerald-700 transition-all shadow-sm shadow-teal-500/20">
               Get Started
-            </button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -91,10 +92,10 @@ function Navigation() {
                 FAQ
               </a>
               <div className="flex gap-4 pt-4 border-t border-zinc-100">
-                <button className="text-sm text-zinc-600">Log In</button>
-                <button className="text-sm px-4 py-2 bg-gradient-to-r from-teal-600 to-emerald-600 text-white rounded-md">
+                <Link href="/login" className="text-sm text-zinc-600">Log In</Link>
+                <Link href="/signup" className="text-sm px-4 py-2 bg-gradient-to-r from-teal-600 to-emerald-600 text-white rounded-md">
                   Get Started
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -135,12 +136,12 @@ function Hero() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <button className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-teal-600 to-emerald-600 text-white text-sm font-medium rounded-lg hover:from-teal-700 hover:to-emerald-700 transition-all shadow-lg shadow-teal-500/25">
+            <Link href="/signup" className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-teal-600 to-emerald-600 text-white text-sm font-medium rounded-lg hover:from-teal-700 hover:to-emerald-700 transition-all shadow-lg shadow-teal-500/25 text-center">
               Start Learning
-            </button>
-            <button className="w-full sm:w-auto px-8 py-3.5 text-zinc-600 text-sm font-medium rounded-lg border border-zinc-200 hover:border-teal-200 hover:bg-teal-50/50 transition-colors">
+            </Link>
+            <a href="#features" className="w-full sm:w-auto px-8 py-3.5 text-zinc-600 text-sm font-medium rounded-lg border border-zinc-200 hover:border-teal-200 hover:bg-teal-50/50 transition-colors text-center">
               See How It Works
-            </button>
+            </a>
           </div>
 
           {/* Trust badges */}
@@ -962,15 +963,16 @@ function Pricing() {
                 ))}
               </ul>
 
-              <button
-                className={`w-full py-3 px-6 rounded-lg text-sm font-medium transition-all ${
+              <Link
+                href="/signup"
+                className={`block w-full py-3 px-6 rounded-lg text-sm font-medium transition-all text-center ${
                   plan.popular
                     ? "bg-gradient-to-r from-teal-500 to-emerald-500 text-white hover:from-teal-600 hover:to-emerald-600 shadow-md shadow-teal-500/20"
                     : "bg-zinc-900 text-white hover:bg-zinc-800"
                 }`}
               >
                 Get Started
-              </button>
+              </Link>
             </div>
           ))}
         </div>
@@ -1103,9 +1105,9 @@ function CTA() {
         <p className="text-zinc-400 mb-10">
           Join thousands of students who transformed their Step 3 performance.
         </p>
-        <button className="px-8 py-3.5 bg-gradient-to-r from-teal-500 to-emerald-500 text-white text-sm font-medium rounded-lg hover:from-teal-600 hover:to-emerald-600 transition-all shadow-lg shadow-teal-500/25">
+        <Link href="/signup" className="inline-block px-8 py-3.5 bg-gradient-to-r from-teal-500 to-emerald-500 text-white text-sm font-medium rounded-lg hover:from-teal-600 hover:to-emerald-600 transition-all shadow-lg shadow-teal-500/25">
           Get Started Now
-        </button>
+        </Link>
         <p className="text-xs text-zinc-500 mt-8">
           30-day money-back guarantee · Instant access · No subscription
         </p>

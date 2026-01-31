@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useReducer, useCallback, ReactNode } from "react";
 import { CCSCase } from "@/data/cases/types";
-import { OrderDefinition, getOrder } from "@/data/orders";
+import { OrderDefinition, OrderCategory, getOrder } from "@/data/orders";
 
 // ============================================
 // TYPES
@@ -19,7 +19,7 @@ export interface SimulationClock {
 export interface PlacedOrder {
   orderId: string;
   orderDisplay: string;
-  category: string;
+  category: OrderCategory;
   orderedAt: SimulationClock;
   resultsAvailableAt: SimulationClock;
   status: "pending" | "in_progress" | "completed";
@@ -93,7 +93,7 @@ export interface SimulationState {
 
   // View and Modal states
   activeView: ActiveView; // Which main page is displayed
-  activeModal: "schedule" | "location" | null; // Popups that overlay on pages
+  activeModal: "schedule" | "location" | "history_pe" | "orders" | null; // Popups that overlay on pages
 
   // Scoring
   score: number;
@@ -460,7 +460,7 @@ export function SimulationProvider({ children }: SimulationProviderProps) {
 
   const placeOrders = useCallback(
     (orderIds: string[]) => {
-      const orders: PlacedOrder[] = orderIds
+      const orders = orderIds
         .map((orderId) => {
           const orderDef = getOrder(orderId);
           if (!orderDef) return null;
